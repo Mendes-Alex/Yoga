@@ -1,0 +1,162 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(green.jpg);/*no-repeat top center fixed;*/
+    background-attachment: fixed;
+    background-position:center;
+   
+}
+a
+{
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+}
+header
+{   
+
+  
+     width:100%;
+
+}
+header .logo
+{   
+    padding:5px;
+    color: rgb(7, 7, 7);
+    height: 55px;
+    line-height: 40px;
+    float: left;
+    font-weight: bold;
+}
+header nav
+{
+    float: right;
+}
+header nav ul 
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li
+{
+    list-style: none;
+    position: relative;
+}
+header nav ul li.sub-menu:before
+{
+    content: '\f0d7';
+    font-family: fontAwesome;
+    position: absolute;
+    line-height: 50px;
+    color:rgb(3, 3, 3);
+    right: 5px;
+}
+header nav ul li.active.sub-menu:before
+{
+    content: '\f0d8';
+
+}
+
+header nav ul li ul
+{
+    position: relative;
+    left: 0;
+    background: rgb(255, 254, 254);
+    display: none;
+}
+header nav ul li.active ul
+{
+    display: block;
+}
+header nav ul li ul li
+{
+   display: block;
+   width: 200px;
+}
+header nav ul li a
+{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: rgb(7, 7, 7);
+    text-decoration: none;
+    display: block;
+}
+header nav ul li a:hover,
+header nav ul li a.active
+{
+    color: rgb(7, 7, 7);
+    background: #fcfdfd;
+}
+.menu-toggle
+{   
+    color: rgb(7, 7, 7);
+    float: right;
+    margin-right: 20px;
+    line-height: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.footer 
+{
+    position: relative;
+    top: 500px;
+    color:black;
+    padding-left: 140px;
+  
+   
+  }
+
+@media (max-width: 900px)
+{
+    header
+    {
+       
+       
+    }
+    .menu-toggle
+    {
+        display: block;
+    }
+    header nav
+    {
+        
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: rgb(252, 249, 249);
+        top: 50px;
+        left: -100%;
+        transition: 0.5s;
+    }
+    header nav.active
+    {
+        left: 0;
+    }
+    header nav ul
+    {
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a
+    {
+        border-bottom: 1px solid rgba(0,0,0,.2);
+    }
+    header nav ul li.active ul
+    {
+        position: relative;
+        background: #f6f7f8;
+    }
+    header nav ul li ul li
+    {
+        width: 100%;
+    }
+    
+  
+
+}
